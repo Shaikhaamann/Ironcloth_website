@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ironcloth</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+    <style>
+        footer {
+            float: left;
+            width: 100%;
+        }
+
+        footer .col-lg-4 {
+            float: left;
+            padding: 0 4px;
+        }
+
+        .row.lastrow {
+            margin-top: 3%;
+        }
+
+        .outsource h1 {
+            font-size: 25px;
+            margin-bottom: 1%;
+        }
+
+        .outsource {
+            padding: 50px 0 !important;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .lrow.col-lg-4 {
+                padding-left: 4%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .sticky-navbar.sn-show {
+                overflow-x: hidden !important;
+                top: 0 !important;
+            }
+
+            html,
+            body {
+                overflow-x: hidden !important;
+            }
+
+            .prices ul {
+                height: 50px !important;
+            }
+
+            .prices .col-md-6.col-6.col-right ul li {
+                line-height: 40px !important;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        .html {
+            background-color: #E8F0FA
+        }
+
+        .container {
+            max-width: 60rem
+        }
+
+        .container {
+            margin: 0 auto
+        }
+
+        .card {
+            max-width: 40rem
+        }
+
+        .card {
+            border-bottom: 5px
+        }
+
+        .card {
+            margin: 0 auto
+        }
+
+        .card {
+            margin-top: 100px
+        }
+
+        .card {
+            min-height: 300px
+        }
+
+        .card {
+            background-color: #fff
+        }
+
+        .card {
+            font-weight: 700
+        }
+
+        .card {
+            text-transform: uppercase
+        }
+
+        .card {
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.22), 0 40px 77px 0 rgba(0, 0, 0, 0.22)
+        }
+
+        .form__name {
+            font-family: 'Oxygen'
+        }
+
+        .form__name {
+            border-top-left-radius: 5px
+        }
+
+        .form__name {
+            border-top-right-radius: 5px
+        }
+
+        .form__name {
+            font-weight: 900
+        }
+
+        .form__name {
+            background-color: #15A4FA
+        }
+
+        .form__name {
+            padding: 20px
+        }
+
+        .form__name {
+            color: #fff
+        }
+
+        .form__name {
+            font-size: 1.2rem
+        }
+
+        .time__container,
+        .message__container,
+        .contact__container {
+            padding: 20px 50px
+        }
+
+
+        .form__time,
+        .form__contact {
+            color: black
+        }
+
+        .form__time,
+        .form__contact {
+            font-size: 0.7rem
+        }
+
+        .form__time,
+        .form__contact {
+            letter-spacing: 0.5px
+        }
+
+        .form__time,
+        .form__contact {
+            text-transform: uppercase
+        }
+
+        .form__time,
+        .form__contact {
+            font-weight: 700
+        }
+
+        .form__time,
+        .form__contact {
+            margin-top: 10px
+        }
+
+
+        .date,
+        .time,
+        .timezone,
+        .cname,
+        .cnum,
+        .email {
+            display: inline-block
+        }
+
+        label {
+            margin-bottom: 10px
+        }
+
+        label,
+        input {
+            display: block
+        }
+
+        label,
+        input {
+            width: 200px
+        }
+
+
+        .time,
+        .cnum {
+            margin-left: 20px
+        }
+
+        .timezone,
+        .email {
+            margin-top: 10px
+        }
+
+        .timezone,
+        .email {
+            display: block
+        }
+
+        input {
+            width: 200px
+        }
+
+
+        .section {
+            color: black
+        }
+
+        .box {
+            vertical-align: middle
+        }
+
+        .box {
+            cursor: default
+        }
+
+        .box {
+
+            user-select: none
+        }
+
+        .box {
+            display: inline-block
+        }
+
+        .box {
+            font-size: 9px
+        }
+
+        .box {
+            font-weight: 900
+        }
+
+        .box {
+            height: 22px
+        }
+
+        .box {
+            width: 20px
+        }
+
+        .box {
+            margin-right: 8px;
+        }
+
+        .box {
+            line-height: 20px
+        }
+
+        .box {
+            border-radius: 50px
+        }
+
+        .box {
+            border: 1px solid black
+        }
+
+        .box {
+            background-color: #000000
+        }
+
+        .box {
+            text-align: center
+        }
+
+        .box {
+            color: #fff
+        }
+
+        span {
+            vertical-align: middle
+        }
+
+        .span {
+            margin-left: 10px
+        }
+
+        textarea {
+            box-sizing: border-box
+        }
+
+        textarea {
+            font-weight: normal
+        }
+
+        textarea {
+            padding: 5px
+        }
+
+        textarea {
+            margin-top: 20px
+        }
+
+        textarea {
+            border: 1px solid black
+        }
+
+        textarea {
+            border-radius: 3px
+        }
+
+        textarea {
+            outline: none
+        }
+
+        textarea {
+            transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        }
+
+        textarea {
+            color: black
+        }
+
+        text:focus {
+            border-color: red
+        }
+
+        circle::placeholder {
+            font-weight: 300
+        }
+
+        circle::placeholder {
+            color: #A9A9A9
+        }
+
+
+        input {
+            font-size: 0.8rem
+        }
+
+        input {
+            font-weight: 700
+        }
+
+        input {
+            letter-spacing: 0.5px
+        }
+
+        input {
+            background: transparent
+        }
+
+        input {
+            border: 1px solid black
+        }
+
+        input {
+            border-radius: 3px
+        }
+
+        input {
+            outline: none
+        }
+
+        input {
+            padding: 10px
+        }
+
+        input {
+            transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        }
+
+        input {
+            color: black
+        }
+
+        input[type=date] {
+            text-transform: uppercase
+        }
+
+        .form__confirmation {
+            padding: 10px 55px
+        }
+
+        button {
+            font-size: 12px
+        }
+
+        button {
+            text-transform: uppercase
+        }
+
+        button {
+            font-weight: 700
+        }
+
+        button {
+            letter-spacing: 1px
+        }
+
+        button {
+            background-color: #30b2f8
+        }
+
+        button {
+            border: 1px solid white
+        }
+
+        button:hover {
+            border: black;
+            background-color: rgb(46, 46, 46);
+        }
+
+        button {
+            color: #fff
+        }
+
+        button {
+            padding: 18px
+        }
+
+        button {
+            border-radius: 5px
+        }
+
+        button {
+            margin-left: 0%;
+        }
+
+        button {
+            outline: none
+        }
+
+        button {
+            transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        }
+
+        button {
+            position: relative
+        }
+
+        button {
+            left: 250px
+        }
+
+        button {
+            margin-bottom: 20px
+        }
+
+        button2 {
+            font-size: 18px;
+            color: #4e4e4e;
+            font-family: inherit;
+            font-weight: 800;
+            cursor: pointer;
+            position: relative;
+            border: none;
+            background: none;
+            text-transform: uppercase;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: color;
+        }
+
+        button2:focus,
+        button2:hover {
+            color: #000000;
+        }
+
+        button2:focus:after,
+        button2:hover:after {
+            width: 100%;
+            left: 0%;
+        }
+
+        button2:after {
+            content: "";
+            pointer-events: none;
+            bottom: -2px;
+            left: 50%;
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #000000;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: width, left;
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="fluid-contaner">
+    <nav class="navbar navbar-expand-lg nevbar-dark" style="background-color: black;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">ironcloth</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main page.html"
+                            style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" style="color: white;">About us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="contact us.html" style="color: white;">contact us</a>
+                </ul>
+
+
+            </div>
+    </nav>
+    </div> 
+    
+
+
+    <div class="container">
+        <div class="card">
+            <div class="form__name">
+                Scheduling Form
+            </div>
+            <div class="time__container">
+                <div class="section">
+                    <div class="box">
+                        1
+                    </div><span>Date &amp; Time</span>
+                </div>
+                <form action="" class="form__time">
+                    <div class="date">
+                        <label for="date">Date</label> <input id="date" type="date">
+                    </div>
+                    <div class="time">
+                        <label for="time">Time</label> <input id="time" type="time">
+                    </div>
+
+                </form>
+            </div>
+            <div class="message__container">
+                <div class="section">
+                    <div class="box">
+                        2
+                    </div><span>Your Message</span>
+                </div>
+                <textarea placeholder="e.g. Please do .. Also, .." cols="50" rows="5"></textarea>
+            </div>
+            <div class="contact__container">
+                <div class="section">
+                    <div class="box">
+                        3
+                    </div><span>Contact Information</span>
+                </div>
+                <form action="" class="form__contact">
+                    <div class="cname">
+                        <label for="cname">Name</label> <input placeholder="e.g.Aman shaikh" id="cname" type="text">
+                    </div>
+                    <div class="cnum">
+                        <label for="cnum">Phone Number</label> <input placeholder="+91" id="cnum" type="text">
+                    </div>
+                    <div class="email">
+                        <label for="cemail">Email</label> <input placeholder="e.g.Aman123@gmail.com" id="cemail"
+                            type="email">
+                    </div>
+                </form>
+            </div>
+            <div class="form__confirmation">
+                <a style="color: #ffffff;" href="shoppingcart.html">
+                    <button2>Go Back</button2>
+                </a>
+                <a href="confirm.html" ><button>Confirm Information</button></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="./assets/js/bootstrap-input-spinner.js"></script> <!-- this is for bootstrap snipper  -->
+    <!-- <script src="script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+
+
+
+    <script>
+        AOS.init();
+        flatpickr("#myID", {});
+
+    </script>
+    <script>
+        $(window).scroll(function () {
+            // alert('hello');
+
+            //wait until user scrolls down to offset 200
+            if ($(document).scrollTop() > 200) {
+                //add a class to header 'stickyheader'
+
+                $('.sticky-navbar').addClass('sn-show');
+            }
+            else {
+                // remove the class 'stickyheader'
+                $('.sticky-navbar').removeClass('sn-show');
+
+            }
+        }); 
+    </script>
+    <script>
+        $('#city').select2();
+    </script>
+
+    <script type="text/javascript" src="runtime.js"></script>
+    <script type="text/javascript" src="es2015-polyfills.js" nomodule=""></script>
+    <script type="text/javascript" src="polyfills.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+
+</body>

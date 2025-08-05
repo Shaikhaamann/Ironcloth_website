@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ironcloth</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container my-4">
+        <div class="card text-bg mb-6" style="max-width: 90rem;">
+            <div class="card-header">Shopping Cart</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3"> <img src="book2.jpg" width="70px" height="70px"></div>
+                    <div class="col-md-3">
+                        <h5>drycleaning</h5>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primary">-</button>
+                            <input type="text" id="pin" name="pin" maxlength="1" size="1">
+                            <button type="button" class="btn btn-primary">+</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <center>₹300</center>
+                    </div>
+                </div>
+                <br>
+
+
+
+
+                <div class="contaner col-md-12">
+                    <script>
+                        var k = 1;
+                        function qtrFunction(V) {
+                            if (V == "I") {
+                                k++;
+                            }
+                            else {
+                                k--;
+                            }
+                            document.getElementById('qtrrr').innerHTML = k;
+                            console.log(k);
+                        }
+
+                    </script>
+
+
+
+
+
+                    <button onclick="qtrFunction('I')" style="padding:5px">+</button>
+                    <div style="color:white; font-size:70px;">QTR <span id="qtrrr" style="color:rgb(0, 0, 0);">0</span>
+                    </div>
+                    <button onclick="qtrFunction('D')" style="padding:5px">-</button>

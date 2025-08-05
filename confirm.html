@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #048508cb;
+	color: #fff;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+main {
+	padding: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	margin-top: 30px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-top: 10px;
+}
+
+table {
+	margin-top: 30px;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #f2f2f2;
+	font-weight: bold;
+}
+
+td {
+	text-align: center;
+}
+
+td[colspan="2"] {
+	font-weight: bold;
+}
+
+button2 {
+            font-size: 18px;
+            color: #4e4e4e;
+            font-family: inherit;
+            font-weight: 800;
+            cursor: pointer;
+            position: relative;
+            border: none;
+            background: none;
+            text-transform: uppercase;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: color;
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+
+        button2:focus,
+        button2:hover {
+            color: #000000;
+        }
+
+        button2:focus:after,
+        button2:hover:after {
+            width: 100%;
+            left: 0%;
+        }
+
+        button2:after {
+            content: "";
+            pointer-events: none;
+            bottom: -2px;
+            left: 50%;
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #000000;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: width, left;
+
+        }
+
+    </style>
+	<title>Order Confirmation | Ironcloth</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1> successfully Order Confirmation</h1>
+	</header>
+	<main>
+		<h2>Thank you for your order!</h2>
+		<p>Your order has been successfully processed and will be shipped within the next 2-3 business days. We will send you an email with the tracking information as soon as your order is on its way.</p>
+		<p>If you have any questions or concerns about your order, please contact our customer support team.</p>
+
+		<h2>Order Details</h2>
+		<table>
+			<tr>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>Ironcloth T-Shirt</td>
+				<td>1</td>
+				<td>₹ 10.00</td>
+			</tr>
+			<tr>
+				<td>Ironcloth Pant</td>
+				<td>1</td>
+				<td>₹ 10.00</td>
+			</tr>
+            <tr>
+				<td>Ironcloth kurta</td>
+				<td>1</td>
+				<td>₹ 15.00</td>
+			</tr>
+			<tr>
+				<td>Shipping</td>
+				<td colspan="2">Free</td>
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td colspan="2">₹ 35.00</td>
+			</tr>
+		</table>
+	</main>
+
+    <a style="color: #ffffff;" href="scheduling.html">
+        <button2>Go Back</button2>
+    </a>    
+</body>
+</html>
+
+

@@ -1,0 +1,492 @@
+<head>
+    <style>
+        .container-fluid {
+            display: flex;
+            padding: 20px;
+            background-color: #000000;
+            color: #000000;
+        }
+
+        .product-container {
+            padding: 50px;
+            width: 950px;
+            height: 1350px;
+            margin: 80px auto;
+            background: #e9e8e8;
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.22), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container{
+            display: flex;
+            border-radius: 30px;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px;
+            margin: 100px;
+            margin-top: 100px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .product-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 75px;
+        }
+
+        .product-image {
+            flex-basis: 25%;
+            text-align: center;
+        }
+
+        .product-image img {
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        .name {
+            flex-basis: 25%;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-quantity {
+            flex-basis: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .product-quantity button1 {
+            background-color: #ffffff;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            box-sizing: border-box;
+            color: #000000;
+            cursor: pointer;
+            flex: 0 0 auto;
+            font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+            padding: .75rem 1.2rem;
+            text-align: center;
+            text-decoration: none #6B7280 solid;
+            text-decoration-thickness: auto;
+            transition-duration: .2s;
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: auto;
+        }
+
+        .product-quantity button1:hover {
+            background-color: #ffffff;
+        }
+
+        .product-quantity button1:focus {
+            box-shadow: none;
+            outline: 2px solid rgb(255, 255, 255);
+            outline-offset: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .product-quantity button1 {
+                padding: .75rem 1.5rem;
+            }
+        }
+
+
+        .product-quantity span {
+            font-size: 20px;
+            color: #000000;
+            margin: 20px 20px;
+        }
+
+        .product-price {
+            flex-basis: 25%;
+            text-align: center;
+        }
+
+        .product-price span {
+            display: block;
+            font-size: 20px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .total {
+            display: flex;
+            margin-left: 30%;
+            align-self: auto;
+
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            height: 10px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #d6d6d6;
+        }
+
+
+        hr.rounded {
+            border-top: 8px solid #000000;
+            border-radius: 5px;
+        }
+
+        button {
+            margin: 0 auto;
+            --primary-color: #645bff;
+            --secondary-color: #fff;
+            --hover-color: #111;
+            --arrow-width: 10px;
+            --arrow-stroke: 2px;
+            box-sizing: border-box;
+            margin-left: 42%;
+            border: 0;
+            border-radius: 20px;
+            color: var(--secondary-color);
+            padding: 1em 1.8em;
+            background: var(--primary-color);
+            display: flex;
+            transition: 0.2s background;
+            align-items: center;
+            gap: 0.6em;
+            font-weight: bold;
+
+        }
+
+        button .arrow-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button .arrow {
+            margin-top: 1px;
+            width: var(--arrow-width);
+            background: var(--primary-color);
+            height: var(--arrow-stroke);
+            position: relative;
+            transition: 0.2s;
+        }
+
+        button .arrow::before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            border: solid var(--secondary-color);
+            border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+            display: inline-block;
+            top: -3px;
+            right: 3px;
+            transition: 0.2s;
+            padding: 3px;
+            transform: rotate(-45deg);
+        }
+
+        button:hover {
+            background-color: var(--hover-color);
+        }
+
+        button:hover .arrow {
+            background: var(--secondary-color);
+        }
+
+        button:hover .arrow:before {
+            right: 0;
+        }
+
+        .p {
+            margin-left: 70%;
+        }
+
+
+        .quantity input {
+            border: none;
+            text-align: center;
+            width: 32px;
+            font-size: 16px;
+            color: #43484D;
+            font-weight: 300;
+        }
+
+        .total {
+            margin-left: 75%;
+            position: relative;
+            color: #645bff;
+            margin: 20px 20px;
+            align-items: center;
+
+        }
+
+        .total {
+            margin-left: 49%;
+            position: relative;
+            color: #0a0a0a;
+            align-items: center;
+
+        }
+
+
+
+        .navbar {
+            background-color: black;
+            padding: 20px 10px;
+            display: flex;
+            margin-block-start: 0%;
+            justify-content: left;
+            border-radius: 5px;
+        }
+
+        .logo img {
+            width: 20%;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin-right: 20px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding-bottom: 5px;
+        }
+
+        .nav-menu a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        .nav-menu .active a {
+            border-bottom: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-menu">
+            <li class="active"><a href="main page.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="product-container">
+        <div class="product-grid">
+            <div class="product-image">
+                <img src="shirt.png" alt="Shirt Image" width="300" height="300">
+            </div>
+            <div class="name">
+                <p>Shirt</p>
+            </div>
+            <div class="product-quantity">
+                <button1 id="shirt-decrement">-</button1>
+                <span id="shirt-count">0</span>
+                <button1 id="shirt-increment">+</button1>
+            </div>
+            <div class="product-price">
+                <span id="shirt-price">₹</span>
+            </div>
+        </div>
+        <div class="product-grid">
+            <div class="product-image">
+                <img src="pant.png" alt="Pant Image" width="300" height="300">
+            </div>
+            <div class="name">
+                <p>Pant</p>
+            </div>
+            <div class="product-quantity">
+                <button1 id="pant-decrement">-</button1>
+                <span id="pant-count">0</span>
+                <button1 id="pant-increment">+</button1>
+            </div>
+            <div class="product-price">
+                <span id="pant-price">₹</span>
+            </div>
+        </div>
+        <div class="product-grid">
+            <div class="product-image">
+                <img src="kurta.png" alt="kurta Image" width="300" height="300">
+            </div>
+            <div class="name">
+                <p>kurta</p>
+            </div>
+            <div class="product-quantity">
+                <button1 id="kurta-decrement">-</button1>
+                <span id="kurta-count">0</span>
+                <button1 id="kurta-increment">+</button1>
+            </div>
+            <div class="product-price">
+                <span id="kurta-price">₹</span>
+            </div>
+        </div>
+
+
+
+        <div class="divider">
+
+            <div class="total">
+                <p>Total Order Value: </p> <span id="total-price"></span>
+
+
+            </div>
+            <a style="color: #645bff;color: #111(--hover-color)" href="scheduling.html">
+                <button>
+                    Schedule Pickup
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                    </div>
+                </button>
+            </a>
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        var shirtCountEl = document.getElementById("shirt-count");
+        var shirtIncrementEl = document.getElementById("shirt-increment");
+        var shirtDecrementEl = document.getElementById("shirt-decrement");
+        var shirtPriceEl = document.getElementById("shirt-price");
+
+        var shirtCount = 0;
+        var shirtPrice =10;
+
+        function updateShirtCount() {
+            shirtCountEl.innerHTML = shirtCount;
+            shirtPriceEl.innerHTML = "₹" + (shirtCount * shirtPrice);
+        }
+
+        shirtIncrementEl.addEventListener("click", function () {
+            shirtCount++;
+            updateShirtCount();
+        });
+
+        shirtDecrementEl.addEventListener("click", function () {
+            if (shirtCount > 0) {
+                shirtCount--;
+                updateShirtCount();
+            }
+        });
+
+        var pantCountEl = document.getElementById("pant-count");
+        var pantIncrementEl = document.getElementById("pant-increment");
+        var pantDecrementEl = document.getElementById("pant-decrement");
+        var pantPriceEl = document.getElementById("pant-price");
+
+        var pantCount = 0;
+        var pantPrice = 10;
+
+        function updatePantCount() {
+            pantCountEl.innerHTML = pantCount;
+            pantPriceEl.innerHTML = "₹" + (pantCount * pantPrice);
+        }
+
+        pantIncrementEl.addEventListener("click", function () {
+            pantCount++;
+            updatePantCount();
+        });
+
+        pantDecrementEl.addEventListener("click", function () {
+            if (pantCount > 0) {
+                pantCount--;
+                updatePantCount();
+            }
+        });
+
+
+        var kurtaCountEl = document.getElementById("kurta-count");
+        var kurtaIncrementEl = document.getElementById("kurta-increment");
+        var kurtaDecrementEl = document.getElementById("kurta-decrement");
+        var kurtaPriceEl = document.getElementById("kurta-price");
+
+        var kurtaCount = 0;
+        var kurtaPrice = 15;
+
+        function updatekurtaCount() {
+            kurtaCountEl.innerHTML = kurtaCount;
+            kurtaPriceEl.innerHTML = "₹" + (kurtaCount * kurtaPrice);
+        }
+
+        kurtaIncrementEl.addEventListener("click", function () {
+            kurtaCount++;
+            updatekurtaCount();
+        });
+
+        kurtaDecrementEl.addEventListener("click", function () {
+            if (kurtaCount > 0) {
+                kurtaCount--;
+                updatekurtaCount();
+            }
+        });
+
+
+        function updateTotalPrice() {
+            var totalPriceEl = document.getElementById("total-price");
+            var totalPrice = (shirtCount * shirtPrice) + (pantCount * pantPrice) + (kurtaCount * kurtaPrice);
+            totalPriceEl.innerHTML = "₹ " + totalPrice;
+        }
+        function updateShirtCount() {
+            shirtCountEl.innerHTML = shirtCount;
+            shirtPriceEl.innerHTML = "₹ " + (shirtCount * shirtPrice);
+            updateTotalPrice();
+        }
+
+        function updatePantCount() {
+            pantCountEl.innerHTML = pantCount;
+            pantPriceEl.innerHTML = "₹ " + (pantCount * pantPrice);
+            updateTotalPrice();
+        }
+
+        function updatekurtaCount() {
+            kurtaCountEl.innerHTML = kurtaCount;
+            kurtaPriceEl.innerHTML = "₹ " + (kurtaCount * kurtaPrice);
+            updateTotalPrice();
+        }
+
+
+
+    </script>
+
+
+
+</body>
